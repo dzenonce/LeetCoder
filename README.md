@@ -1,3 +1,5 @@
+![images](https://github.com/user-attachments/assets/ee3c4a6f-aac2-4cde-a5b1-efa61b9c069b)
+
 **_LeetCoder_** - _репозиторий, в котором я публикую свои решения задачек LeetСode и даю краткое пояснение логики_
 
 ---
