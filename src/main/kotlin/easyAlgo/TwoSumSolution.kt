@@ -2,13 +2,15 @@ package easyAlgo
 
 class TwoSumSolution {
     fun twoSum(nums: List<Int>, target: Int): List<Int> {
-        val minMap: MutableMap<Int, Int> = mutableMapOf()
+        val desiredMap: MutableMap<Int, Int> = mutableMapOf()
 
-        nums.forEachIndexed { i, num ->
-            val x = target - num
-            val xI = minMap.get(x)
-            if (xI != null) return listOf(i, xI)
-            minMap.put(num, i)
+        // нам необходимо пройти по списку, добавляя в конце итерации каждое значение
+        nums.forEachIndexed { index, num ->
+            val desired = target - num
+            // если искомое уже в списке -> profit
+            val desiredInMap = desiredMap.get(desired)
+            if (desiredInMap != null) return listOf(index, desiredInMap)
+            desiredMap.put(num, index)
         }
         return emptyList()
     }
